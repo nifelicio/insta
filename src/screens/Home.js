@@ -1,10 +1,13 @@
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 import Header from "../components/Header";
 import Stories from "../components/Stories";
+import Post from "../components/Post";
+import Fake from "../assets/fake-feminino.jpg"
+import PostImage from "../assets/post-example.png"
 
 export default function Home() {
   return (
-    <View
+    <ScrollView
       style={{
         flex: 1,
         marginVertical: 32,
@@ -13,6 +16,25 @@ export default function Home() {
     >
       <Header />
       <Stories />
-    </View>
+
+      <Post
+        profileImage={Fake}
+        postImage={PostImage}
+        profileName="Fulano de tal"
+        description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to usin"
+      />
+      <Post
+        profileImage={Fake}
+        postImage={PostImage}
+        profileName="Fulano de tal"
+        description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to usin"
+      />
+      <Post
+        profileImage={Fake}
+        postImage={PostImage}
+        profileName="Fulano de tal"
+        description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to usin"
+      />
+    </ScrollView>
   );
 }
